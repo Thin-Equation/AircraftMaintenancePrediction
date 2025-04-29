@@ -100,7 +100,7 @@ The web application will be available at http://localhost:3000
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/AircraftMaintenancePrediction.git
+   git clone https://github.com/Thin-Equation/AircraftMaintenancePrediction.git
    cd AircraftMaintenancePrediction
    ```
 
@@ -199,15 +199,3 @@ LSTM and GRU models generally achieve the best performance due to their ability 
 ## Contributing
 
 Contributions to improve the project are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgements
-
-This project is based on the NASA Turbofan Engine Degradation Simulation Dataset.
-
-## Contact
-
-If you have any questions or feedback, please open an issue in the GitHub repository.
