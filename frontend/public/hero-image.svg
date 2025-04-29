@@ -1,0 +1,49 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" rx="10" fill="#F3F4FF"/>
+  
+  <!-- Aircraft silhouette -->
+  <path d="M450 180C450 180 480 170 500 170C520 170 530 180 530 190C530 200 520 210 500 210C480 210 450 200 450 200V180Z" fill="#4F46E5" stroke="#312E81" stroke-width="2"/>
+  <path d="M100 190L450 190L450 200L100 200L100 190Z" fill="#4F46E5" stroke="#312E81" stroke-width="2"/>
+  <path d="M130 170L170 190L170 200L130 220L130 170Z" fill="#4F46E5" stroke="#312E81" stroke-width="2"/>
+  <path d="M250 160C250 150 240 140 220 140C200 140 190 150 190 160V230C190 240 200 250 220 250C240 250 250 240 250 230V160Z" fill="#4F46E5" stroke="#312E81" stroke-width="2"/>
+  <path d="M190 160H250" stroke="#312E81" stroke-width="2"/>
+  <path d="M190 230H250" stroke="#312E81" stroke-width="2"/>
+  
+  <!-- Data visualization elements -->
+  <rect x="120" y="280" width="360" height="80" rx="5" fill="white" stroke="#E5E7EB" stroke-width="2"/>
+  <path d="M140 340L160 310L180 330L200 300L220 320L240 290L260 310L280 280L300 320L320 300L340 330L360 290L380 310L400 280L420 300L440 320L460 300" stroke="#4F46E5" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Gauge visualization -->
+  <circle cx="500" cy="100" r="40" fill="white" stroke="#E5E7EB" stroke-width="2"/>
+  <path d="M500 100L535 115" stroke="#4F46E5" stroke-width="2" stroke-linecap="round"/>
+  <path d="M480 70L520 70" stroke="#E5E7EB" stroke-width="2"/>
+  <path d="M470 85L530 85" stroke="#E5E7EB" stroke-width="2"/>
+  <path d="M465 100L535 100" stroke="#E5E7EB" stroke-width="2"/>
+  <path d="M470 115L530 115" stroke="#E5E7EB" stroke-width="2"/>
+  <path d="M480 130L520 130" stroke="#E5E7EB" stroke-width="2"/>
+  <path d="M470 70L480 70" stroke="#F87171" stroke-width="2"/>
+  <path d="M460 85L470 85" stroke="#F87171" stroke-width="2"/>
+  <path d="M460 100L465 100" stroke="#F87171" stroke-width="2"/>
+  <path d="M460 115L470 115" stroke="#FBBF24" stroke-width="2"/>
+  <path d="M470 130L480 130" stroke="#34D399" stroke-width="2"/>
+  
+  <!-- Analytics dots -->
+  <circle cx="160" y="310" r="3" fill="#4F46E5"/>
+  <circle cx="200" y="300" r="3" fill="#4F46E5"/>
+  <circle cx="240" y="290" r="3" fill="#4F46E5"/>
+  <circle cx="280" y="280" r="3" fill="#4F46E5"/>
+  <circle cx="320" y="300" r="3" fill="#4F46E5"/>
+  <circle cx="360" y="290" r="3" fill="#4F46E5"/>
+  <circle cx="400" y="280" r="3" fill="#4F46E5"/>
+  <circle cx="440" y="320" r="3" fill="#4F46E5"/>
+  
+  <!-- Status indicators -->
+  <circle cx="100" cy="100" r="20" fill="white" stroke="#E5E7EB" stroke-width="2"/>
+  <circle cx="100" cy="100" r="10" fill="#34D399"/>
+  
+  <circle cx="150" cy="100" r="20" fill="white" stroke="#E5E7EB" stroke-width="2"/>
+  <circle cx="150" cy="100" r="10" fill="#FBBF24"/>
+  
+  <circle cx="200" cy="100" r="20" fill="white" stroke="#E5E7EB" stroke-width="2"/>
+  <circle cx="200" cy="100" r="10" fill="#F87171"/>
+</svg>

@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python-multipart
+pydantic
+torch
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+python-dotenv
+aiofiles
+jinja2
