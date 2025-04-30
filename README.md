@@ -26,35 +26,39 @@ Each data file contains multiple sensor readings from aircraft engines. Each eng
 ```
 AircraftMaintenancePrediction/
 ├── README.md
-├── requirements.txt
-├── aircraft-predictive-maintenance-rnn-lstm-gru.ipynb  # Jupyter notebook with analysis
+├── .gitignore                                          # Git ignore file
 ├── PM_train.txt                                        # Training dataset
 ├── PM_test.txt                                         # Testing dataset
 ├── PM_truth.txt                                        # Ground truth data
-├── backend/                                            # FastAPI backend service
-│   ├── data_processing/                                # Data loading and preprocessing
+├── AircraftMaintenanceBackend/                         # FastAPI backend service
+│   ├── __init__.py
+│   ├── main.py                                         # Main application entry point
+│   ├── requirements.txt                                # Python dependencies
+│   ├── api/                                            # API endpoints and routes
+│   ├── data/                                           # Trained model files
 │   ├── models/                                         # PyTorch model implementations
-│   ├── utils/                                          # Evaluation and training utilities
-│   ├── visualization/                                  # Plotting and visualization tools
-│   ├── scripts/                                        # Training and evaluation scripts
-│   ├── uploads/                                        # Directory for uploaded datasets
-│   └── results/                                        # Model results and outputs
-└── frontend/                                           # Next.js frontend application
-    ├── app/                                            # Next.js app router
-    ├── components/                                     # React components
+│   └── utils/                                          # Data processing utilities
+└── AircraftMaintenanceFrontend/                        # Next.js frontend application
+    ├── next.config.js                                  # Next.js configuration
+    ├── package.json                                    # Node.js dependencies
+    ├── tsconfig.json                                   # TypeScript configuration
     ├── public/                                         # Static assets
-    └── types/                                          # TypeScript type definitions
+    └── src/                                            # Source code
+        ├── app/                                        # Next.js app router
+        │   ├── predict/                                # Prediction page
+        │   └── train/                                  # Model training page
+        ├── services/                                   # API and WebSocket services
+        └── types/                                      # TypeScript type definitions
 ```
 
 ## Models
 
-The project implements five different neural network architectures:
+The project implements four different neural network architectures:
 
-1. **Simple RNN with Single Feature**: A basic RNN using only one sensor feature
-2. **Simple RNN with Multiple Features**: Uses 25 features (sensor readings and settings)
-3. **Bidirectional RNN**: Processes sequences in both directions to capture more context
-4. **LSTM (Long Short-Term Memory)**: Better captures long-term dependencies in the data
-5. **GRU (Gated Recurrent Unit)**: A more efficient alternative to LSTM
+1. **Simple RNN**: A basic RNN for sequential data processing
+2. **Bidirectional RNN**: Processes sequences in both directions to capture more context
+3. **LSTM (Long Short-Term Memory)**: Better captures long-term dependencies in the data
+4. **GRU (Gated Recurrent Unit)**: A more efficient alternative to LSTM
 
 ## Web Application
 
@@ -71,7 +75,7 @@ The backend provides RESTful API endpoints for:
 To run the backend server:
 
 ```bash
-cd backend
+cd AircraftMaintenanceBackend
 pip install -r requirements.txt
 uvicorn main:app --reload
 ```
@@ -89,7 +93,7 @@ The frontend provides an intuitive user interface featuring:
 To run the frontend:
 
 ```bash
-cd frontend
+cd AircraftMaintenanceFrontend
 npm install
 npm run dev
 ```
@@ -110,19 +114,15 @@ The web application will be available at http://localhost:3000
    source env/bin/activate  # On Windows: env\Scripts\activate
    ```
 
-3. Install the required packages:
+3. Install backend dependencies:
    ```
+   cd AircraftMaintenanceBackend
    pip install -r requirements.txt
    ```
 
-4. Set up the web application (optional):
-   ```bash
-   # Install backend dependencies
-   cd backend
-   pip install -r requirements.txt
-   
-   # Install frontend dependencies
-   cd ../frontend
+4. Install frontend dependencies:
+   ```
+   cd ../AircraftMaintenanceFrontend
    npm install
    ```
 
@@ -132,13 +132,13 @@ The web application will be available at http://localhost:3000
 
 1. Start the backend server:
    ```bash
-   cd backend
+   cd AircraftMaintenanceBackend
    uvicorn main:app --reload
    ```
 
 2. Start the frontend development server:
    ```bash
-   cd frontend
+   cd AircraftMaintenanceFrontend
    npm run dev
    ```
 
@@ -150,34 +150,12 @@ The web application will be available at http://localhost:3000
    - Train models and generate predictions
    - Visualize results
 
-### Using Scripts
+## Recent Updates
 
-#### Training a Model
-
-To train a model, use the training script:
-
-```bash
-cd backend
-python scripts/train_pytorch.py
-```
-
-#### Evaluating a Model
-
-To evaluate a trained model, use the evaluation script:
-
-```bash
-cd backend
-python scripts/evaluate_pytorch.py
-```
-
-#### Making Predictions
-
-To make predictions with a trained model, use the prediction script:
-
-```bash
-cd backend
-python scripts/predict_pytorch.py
-```
+- Fixed WebSocket callback handling in the training page
+- Added proper TypeScript type support for training status updates
+- Improved error handling and data validation
+- Updated project structure documentation
 
 ## Model Performance
 

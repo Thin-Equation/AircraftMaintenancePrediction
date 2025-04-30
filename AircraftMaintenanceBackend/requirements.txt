@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+numpy
+pandas
+scikit-learn
+torch
+matplotlib
+seaborn
+pydantic
+python-multipart
+websockets

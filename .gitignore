@@ -11,67 +11,71 @@ dist/
 downloads/
 eggs/
 .eggs/
+lib/
 lib64/
 parts/
 sdist/
 var/
+wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-
-# Virtual Environment
-.venv/
-env/
+.env
+.venv
+venv/
 ENV/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
 
-# Jupyter Notebook
-.ipynb_checkpoints
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+*.iws
+.idea_modules/
+out/
 
-# PyTorch model files
-*.pt
-*.pth
-backend/results/*.pt
-backend/results/*.pth
-
-# Uploaded data files (optional - uncomment if you want to ignore user uploads)
-# backend/uploads/*
+# VSCode
+.vscode/
+*.code-workspace
+.history/
 
 # Node.js / Next.js
-frontend/node_modules/
-frontend/.next/
-frontend/out/
-frontend/.env.local
-frontend/.env.development.local
-frontend/.env.test.local
-frontend/.env.production.local
-frontend/npm-debug.log*
-frontend/yarn-debug.log*
-frontend/yarn-error.log*
-frontend/.pnpm-debug.log*
-
-# IDE specific files
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
-.DS_Store
-
-# Log files
-*.log
-logs/
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
+.next/
+out/
+.DS_Store
+*.pem
+.env*.local
+.vercel
+.turbo
 
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# Production build files
+/build
+/backend/dist
 
-# Large files and datasets (optional - uncomment if needed)
-# *.csv
-# *.gz
-# *.zip
+# Dataset and models (uncomment if you don't want to track these)
+# *.txt
+# *.pt
+# *.pth
+# *.h5
+# AircraftMaintenanceBackend/data/*.pt
+# AircraftMaintenanceBackend/data/*.pth
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
